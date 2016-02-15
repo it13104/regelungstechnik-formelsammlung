@@ -1,0 +1,42 @@
+\begin{tcolorbox}[colback=white!10!white,colframe=blue!70!black,title=KOCHREZEPT: Regelungsnormalform]
+	\input{content/regel/definition.tex}
+	\tcblower
+	Bilde die Inverse $\bs{\mathcal{C}}^{-1}$ von:
+	\begin{align*}
+		\bs{\mathcal{C}} = \begin{bmatrix}
+			G & FG & \cdots & F^{n-1}G
+		\end{bmatrix}
+	\end{align*}
+	Nehme letzte Zeile $\bs{t}_1^T$ von $\bs{\mathcal{C}}^{-1}$ 
+	\begin{align*}
+		\begin{bmatrix}
+			0 & 0 & \cdots & 1
+		\end{bmatrix} \bs{\mathcal{C}}^{-1}
+	\end{align*}
+	Stelle inverse der Transformationsmatrix $\bs{T}$ auf:
+	\begin{align*}
+		\bs{T}^{-1} &= \left[\begin{array}{l}
+		\bs{t}_1^T \\
+		\bs{t}_1^T \bs{F}\\
+		\bs{t}_1^T \bs{F}^2\\
+		\vdots\\
+		\bs{t}_1^T \bs{F}^{n-1}
+		\end{array}\right]
+	\end{align*}
+	
+	\begin{tcolorbox}[colback=white!10!white,colframe=blue!70!black,title=Umrechnungsvorschrift Zustandsform]
+		\begin{align*}
+			\bs{B} = \begin{bmatrix}
+			0\\ 0\\ \vdots \\1
+			\end{bmatrix} \hspace{0.5cm}
+			&
+			\bs{A} = \bs{T}^{-1}\bs{FT} &
+			\bs{C} = \bs{HT}
+		\end{align*}
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[colback=white!10!white,colframe=gray!70!black,title=Steuerbarkeit]
+		Das System heißt \textbf{steuerbar}, wenn $\bs{\mathcal{C}}$ \textbf{nicht singulär} ist. (Es existiert eine Inverse von $\bs{\mathcal{C}}$)
+	\end{tcolorbox}
+\end{tcolorbox}
+\columnbreak

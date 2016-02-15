@@ -1,0 +1,38 @@
+\section{Zustandstransformation}
+
+\begin{tcolorbox}[colback=white!10!white,colframe=green!60!black,title=Definition + Umrechnung]
+\begin{minipage}{.45\textwidth}
+	Allgemeine Darstellung:
+	\begin{align*}
+	\dot{\bs{x}} &= \bs{Fx} + \bs{G}u\\
+	y &= \bs{Hx} +Ju
+	\end{align*}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+Darstellung in Normalform:
+\begin{align*}
+\dot{\bs{x}} &= \bs{Ax} + \bs{B}u\\
+y &= \bs{Cx} +Du
+\end{align*}
+\end{minipage}
+\tcblower
+\begin{minipage}{.45\textwidth}
+	\begin{align*}
+	\bs{A} &= \bs{T}^{-1}\bs{F}\bs{T}\\
+ \bs{B} &= \bs{T}^{-1}\bs{G}
+	\end{align*}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+	\begin{align*}
+		\dot{\bs{x}} &= \bs{Fx} + \bs{G}u\\
+		y &= \bs{Hx} +Ju
+	\end{align*}
+\end{minipage}
+
+\end{tcolorbox}
+
+
+
+\input{content/Regelungsnormalform.tex} 
+\input{content/Beobachtungsnormalform.tex}
+\input{content/Modalform.tex}

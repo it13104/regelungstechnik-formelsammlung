@@ -1,0 +1,43 @@
+\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Routh Kriterium] 
+	Gibt Aussage darüber, ob alle Pole des charakteristischen Polynoms $P(s)$ in der LHE liegen:
+	\begin{align*}
+	P(s) = s^n + a_1s^{n-1}+a_2^{n-2}+\ldots + a_{n-1}s+a_n
+	\end{align*}
+	Es muss gelten $a_i > 0$ für $\forall i \in \mathrm{N}$
+	\begin{align*}
+		\begin{matrix}[0.6]
+		n & s^n & 1 & a_2 & a_4 & \ldots \\
+		n-1 & s^{n-1} & a_1 & a_3 & a_5 & \ldots \\
+		n-2 & s^{n-2} & b_1 & b_2 & b_3 & \ldots \\		
+		n-3 & s^{n-3} & c_1 & c_2 & c_3 & \ldots \\
+		\vdots & \vdots & \vdots & \vdots & \vdots  \\
+		2 & s^2 & * & *  \\
+		1 & s^1 & * \\
+		0 & s^0 \ldots 
+		\end{matrix}
+	\end{align*}
+	Die Koeffizienten werden folgendermaßen errechnet:
+	\begin{align*}
+		& b_1 = -\frac{\begin{vmatrix}
+			1 & a_2 \\ a_1 & a_3
+			\end{vmatrix}}{a_1} = \frac{a_1a_2-a_3}{a_1} & c_1 = -\frac{\begin{vmatrix}
+			a_1 & a_3 \\ b_1 & b_2
+			\end{vmatrix}}{b_1} = \frac{b_1a_3-a_1b_2}{b_1}\\
+		& b_2 = -\frac{\begin{vmatrix}
+			1 & a_4 \\ a_1 & a_5
+			\end{vmatrix}}{a_1} = \frac{a_1a_4-a_5}{a_1} & c_2 = -\frac{\begin{vmatrix}
+			a_1 & a_5 \\ b_1 & b_3
+			\end{vmatrix}}{b_1} = \frac{b_1a_5-a_1b_3}{b_1}\\
+		& b_3 = -\frac{\begin{vmatrix}
+			1 & a_6 \\ a_1 & a_7
+			\end{vmatrix}}{a_1} = \frac{a_1a_6-a_7}{a_1} & c_3 = -\frac{\begin{vmatrix}
+			a_1 & a_7 \\ b_1 & b_4
+			\end{vmatrix}}{b_1} = \frac{b_1a_7-a_1b_4}{b_1}
+	\end{align*}
+	
+	\begin{itemize}
+		\item Alle Elemente der ersten Spalte positiv $\Rightarrow$ Wurzeln in der offenen LHE				
+		\item $\#$-Wurzeln  in der geschlossenen RHE   = $\#$-Vorzeichenwechsel 
+		\item Wenn das erste Element einer Zeile null ist, setze $\epsilon > 0$. Stabilitätskriterium für $\epsilon \rightarrow 0_+$
+	\end{itemize}
+\end{tcolorbox}

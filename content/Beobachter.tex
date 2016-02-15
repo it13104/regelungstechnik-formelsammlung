@@ -1,0 +1,28 @@
+\section{Beobachterentwurf}
+
+\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black] 
+	Manche Zustandsgrößen können nur geschätzt werden (Messung nicht möglich). Man nutzt einen Schätzwert (Simulation) $\hat{x}$. Mit dem Beobachterentwurf wird dafür gesorgt, dass der Schätzfehler auf Null abklingt.
+		\textbf{Vorgehensweise}
+		\begin{enumerate}
+			\item Wunschpole zu Wunsch-Charakteristischen Gleichung umformen
+			\item Bilde $\det(s\bs{I}-(\bs{F}-\bs{LH}))\Rightarrow$ - Charakteristische Gleichung abhängig von $\bs{L} = \begin{bmatrix}
+			l_1&\ldots&l_n
+			\end{bmatrix}^T$ 
+			\item Koeffizientenvergleich und Werte von $\bs{L}$ bestimmen
+		\end{enumerate}
+	\tcblower
+\textbf{System in Beobachtungnormalform}
+Die Charakteristische Gleichung lässt sich einfach ablesen aus
+\begin{align*}
+	&\bs{F}-\bs{LH} = 
+	\begin{bmatrix}
+	0 &  \cdots & 0 &-a_n-l_1\\
+	1 &\cdots & 0 & -a_{n-1}-l_2 \\
+	\vdots&\ddots&\vdots&\vdots\\
+	0&\cdots&1&-a_1-l_n
+	\end{bmatrix}	\\
+	&s^n +(a_1+l_n)s^(n-1)+ (a_2+l_{n-1}+\ldots+(a_n+l_1))=0
+\end{align*}
+
+
+\end{tcolorbox}

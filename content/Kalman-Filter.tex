@@ -1,0 +1,42 @@
+\columnbreak
+
+\section{Kalman-Filter - optimaler Schätzer}
+\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black] 
+	\textbf{Das zeitinvariante Kalman-Filter} ist realisierbar, wenn
+	$(\bs{H},\bs{F})$ - detektierbar und $(\bs{F},\bs{Q}^{\frac{1}{2}})$ stabilisierbar. Die Lösung der Matrix-Ricatti Gleichung ist dann ein \textbf{positiv-semidefinite konstante} Matrix $\bs{P}$. 
+	\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black]
+		\begin{align*}
+		&	(\bs{H},\bs{F})& &\dot{\bs{x}} = \bs{Fx} & &\bs{y} = \bs{Hx}\\
+		&	(\bs{F},\bs{Q}^{\frac{1}{2}})&& \dot{\bs{x}} = \bs{Fx}+\bs{Q}^{\frac{1}{2}}u & &
+		\end{align*}
+	\end{tcolorbox}
+	
+	Für die Matrizen gilt: $\bs{Q}\succeq0$ - semidefinit und $\bs{R}\succ0$ - definit. (manchmal werden diagonale Matrizen angenommen.)
+	\\\\
+	\textit{Bemerkung:} Für eine einfache Lösung müssen Rauschprozesse \textbf{Prozessrauschen $w(t)$} und \textbf{Messrauschen $v(t)$} weiß und unkorreliert sein. $E(w(t))= E(v(t)) =0$ und $E(w(t),v(t)^T)=0$
+	Kovarianz kann folgendermaßen ermittelt werden:
+		\begin{align*}
+			w(t) & & E(w(t)w(t)^T) =\bs{Q}\delta(t-\tau) && \bs{Q} \succeq 0 \\ v(t) & & E(v(t)v(t)^T) = \bs{R}\delta(t-\tau) && \bs{R} \succ 0
+ 		\end{align*}
+	
+	\tcblower
+	\textbf{Vorgehensweise:}
+	\begin{enumerate}
+		\item Löse die Gleichung\begin{align*}
+			\bs{0} = \bs{FP} + (\bs{FP})^T -(\bs{HP})^T\bs{R}^{-1}\bs{HP} +\bs{Q}
+		\end{align*}
+		\item Für $2\times2$-Matrizen wird ein symmetrisches $\bs{P}$ angenommen\begin{align*}
+			\begin{bmatrix}
+			p_1 & p_2 \\ p_2 & p_3
+			\end{bmatrix}
+		\end{align*}
+			\item Ein LGS mit drei Unbekannten $p_1,p_2,p_3$ lösen 
+			\item Nur die Lösung mit $p_i\geq 0$   $\forall i$ wählen
+			\item Setze $\bs{P}$ in die Gleichung ein für konstante Rückführmatrix
+			 \begin{align*}
+				\bs{L} = \bs{PH}^T\bs{R}^{-1}
+			\end{align*} 
+	\end{enumerate}
+	
+	
+\end{tcolorbox}

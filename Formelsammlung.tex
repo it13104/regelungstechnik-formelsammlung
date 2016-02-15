@@ -1,0 +1,76 @@
+\documentclass[landscape,fleqn,7pt]{scrartcl} 
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm,landscape]{geometry} 
+\usepackage[utf8]{inputenc} 
+\usepackage[ngerman]{babel} 
+\usepackage{multicol} 
+\usepackage[fleqn]{amsmath} 
+%\usepackage{amsfonts} 
+%\usepackage{amssymb} 
+%\usepackage{gensymb} 
+%\usepackage{dsfont} 
+\usepackage{calc} 
+%\usepackage[permil]{overpic} 
+%\usepackage{graphicx} 
+%\graphicspath{{gfx/}} 
+\usepackage{blindtext} 
+
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{tcolorbox}
+
+\setlength{\intextsep}{0mm plus1mm minus1mm}
+
+%\setlength{\abovecaptionskip}{30pt}
+\makeatletter
+\renewcommand*\env@matrix[1][\arraystretch]{%
+	\edef\arraystretch{#1}%
+	\hskip -\arraycolsep
+	\let\@ifnextchar\new@ifnextchar
+	\array{*\c@MaxMatrixCols c}}
+\makeatother
+\AtBeginEnvironment{bmatrix}{\setlength{\arraycolsep}{1.5pt}}
+\AtBeginEnvironment{vmatrix}{\setlength{\arraycolsep}{1.5pt}}
+\AtBeginEnvironment{array}{\setlength{\arraycolsep}{1.5pt}}
+
+\author{coltz} 
+\title{Formelsammlung Digitaltechnik} 
+
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\setlength\abovedisplayshortskip{0pt}
+\setlength\belowdisplayshortskip{0pt}
+\setlength\abovedisplayskip{0pt}
+\setlength\belowdisplayskip{0pt}
+\abovedisplayskip=5pt plus 3pt minus 5pt 
+\abovedisplayshortskip=0pt plus 3pt 
+\belowdisplayskip=5pt plus 3pt minus 5pt 
+\belowdisplayshortskip=7pt plus 3pt minus 4pt 
+\setlength{\mathindent}{0pt}
+
+%\pagenumbering{gobble}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\begin{document} 
+\setlength{\columnsep}{1cm} 
+\begin{multicols}{3} 
+
+	
+
+	\input{content/blockd.tex}
+	\input{content/wurzelortskurve.tex}
+	\input{content/blockdiagramme.tex}
+	\input{content/zustandsraumdarstellung.tex}
+	\input{content/Zustandstransformation.tex}
+
+	\input{content/diskret.tex}
+	\input{content/partial.tex}
+	\input{content/kap4.tex}
+	\input{content/laplace.tex}
+	\input{content/RegInZR.tex}
+	\input{content/Kalman-Filter.tex}
+	\input{content/LQ-Regler.tex}
+\end{multicols} 
+\end{document}

@@ -1,0 +1,18 @@
+\textbf{Definition:}
+	\begin{align}
+		Y(s) &= \frac{b(s)}{a(s)} U(s) \\ & = \frac{b_1s^{n-1}+\cdots+b_{n-1}s+b_n}{s^n+a_1s^{n-1}+\cdots + a_{n-1}s+a_n} U(s)\label{eq:uebertragung}\\
+		\dot{\bs{x}} &= 
+		\begin{bmatrix}
+			0 & 1 & \cdots & 0\\
+			\vdots & \vdots & \ddots & \vdots \\
+			0&0&\cdots&1\\
+			-a_n&-a_{n-1}&\cdots&-a_1
+		\end{bmatrix}\bs{x}+ 
+		\begin{bmatrix}
+			0 \\ \vdots \\0\\1
+		\end{bmatrix} u \\
+		y&= \begin{bmatrix}
+			b_n & b_{n-1} & \cdots & b_1
+		\end{bmatrix} \bs{x}
+	\end{align}
+

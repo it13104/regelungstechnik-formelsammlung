@@ -1,0 +1,40 @@
+\begin{tcolorbox}[colback=white!10!white,colframe=blue!70!black,title=KOCHREZEPT: Beobachtungsnormalform]
+	\input{./beob/def.tex}
+	\tcblower
+	Bilde die Inverse $\bs{\mathcal{O}}^{-1}$ und nehme letzte \textbf{Spalte} $\bs{t}_1$ von $\bs{\mathcal{O}}^{-1}$
+		
+		\begin{align*}
+		\bs{\mathcal{O}} &= 
+		\left[\begin{array}{l}
+		\bs{H}\\
+		\bs{HF}\\
+		\vdots\\
+		\bs{HF}^{n-1}
+		\end{array}\right] \rightarrow \bs{\mathcal{O}}^{-1} & 	 \bs{t}_1 = \bs{\mathcal{O}}^{-1} 	\begin{bmatrix}
+		0 \\ 0 \\ \vdots \\ 1
+		\end{bmatrix}
+		\end{align*}
+
+	Die Transformationsmatrix bilden $\bs{T}$ nach Vorschrift:
+	\begin{align*}
+	\bs{T} &= \left[\begin{array}{llll}
+	\bs{t}_1 & \bs{Ft}_1 & \dots & \bs{F}^{n-1}\bs{t}_1
+	\end{array}\right]
+	\end{align*}
+	
+	\begin{tcolorbox}[colback=white!10!white,colframe=blue!70!black,title=Umrechnungsvorschrift in Beobachtungsnormalform]
+		\begin{align*}
+		\bs{C} = \begin{bmatrix}
+		0 & 0& \dots &1
+		\end{bmatrix} 
+		\\
+		 \bs{A} = \bs{T}^{-1}\bs{FT} 
+		\\
+	    	\bs{B} = \bs{T}^{-1}\bs{G}
+		\end{align*}
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[colback=white!10!white,colframe=gray!70!black,title=Beobachtbarkeit]
+		Das System heißt \textbf{beobachtbar}, wenn $\bs{\mathcal{O}}$ \textbf{nicht singulär} ist. (Es existiert eine Inverse von $\bs{\mathcal{O}}$)
+	\end{tcolorbox}
+\end{tcolorbox}

@@ -1,0 +1,91 @@
+\section{Diskrete Systeme}
+
+	\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Zusammenhang $s$ und $z$]
+
+\textbf{Abbildung:}	
+
+Linke komplexe s-Halbebene $\Longrightarrow$ Einheitskreis $|z|=1$
+
+$z = e^{sT}$ ist die Abbildungsvorschrift
+\end{tcolorbox}		
+	\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=$z$-Übertragungsfunktion]
+		\begin{align*}
+			\mathcal{Z}\{ f(k-n)\} = z^{-n}F(z)
+		\end{align*}
+		Allgemeine DGL (2. Ordnung):
+		\begin{align*}
+		&y(k)	= -a_1y(k-1)-a_2(k-2)+b_0u(k)\\&+b_1u(k-1)+b_2u(k-2)\\
+		&\mathcal{Z}\{ y(k)\}  = Y(z)\\
+		&Y(z) = (-a_1z^{-1}-a_2z^{-2})Y(z) 
+		+(b_0+b_1z^{-1}+b_2z^{-2})U(z)\\
+		&\frac{Y(z)}{U(z)} = \frac{b_0+b_1z^{-1}+b_2z^{-2}}{1+a_1z^{-1}+a_2z^{-2}}
+		\end{align*}
+		\textbf{	Ablesen des Pols:}
+			\begin{align*}
+			& Y(z) = \frac{1}{1-\alpha z^-1} &\Rightarrow z_1 = \alpha
+			\end{align*}
+		\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black]
+		\textbf{Endwertsatz der $z$-Transformation:}
+		
+		Kontinuierliches System:
+		\begin{align*}
+		\lim\limits_{t\to\infty} x(t) = x_{\text{stat}} = 	\lim\limits_{s\to 0 }sX(s)
+		\end{align*}
+	Diskretes System:
+		\begin{align*}
+		 	\lim\limits_{k\to\infty} x(k) =  x_{\text{stat}} = \lim\limits_{z\to 1 }X(z)
+		\end{align*}
+		\end{tcolorbox}	
+	\end{tcolorbox}	
+	\begin{tcolorbox}[colback=white!10!white,colframe=blue!30!black,title=$z$-Übertragungsfunktion: Halteglied und kontinuierliches System in Reihe] 
+		Das ist eine Approximation über Reihenschaltung Halteglied und kontinuierliches System:
+		\begin{align*}
+			G(z) &= \frac{z-1}{z}\mathcal{Z}\left\{\frac{G(s)}{s}\right\}
+		\end{align*}
+		
+
+
+	\end{tcolorbox}			
+	\section{Diskrete Fundamentalmatrix}
+	\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Definition] 
+		\begin{align*}
+			\bs{A}_d(T)= e^{\bs{A}T} && B_d = \int_{0}^{T}\bs{A}_d
+		(\tau)d\tau	\cdot \bs{B} 
+\end{align*}
+Mit Taylorzerlegung kann man $A_d$ berechnen:
+\begin{align*}
+	e^{\bs{A}t}  &= \bs{I} + \bs{A}t+\bs{A}^2\frac{t^2}{2!} + \bs{A}^3\frac{t^3}{3!}+ \ldots\\
+	\frac{d}{dt}e^{\bs{A}t} &= \bs{A} + \bs{A}^2t+\bs{A}^3\frac{t^2}{2!} + \ldots
+\end{align*}
+	\end{tcolorbox}	
+		\begin{tcolorbox}[colback=white!10!white,colframe=blue!30!black,title=KOCHREZEPT: Fundamentalmatrix Berechnung] 
+			\begin{align*}
+			\bs{A}_d(T) &= \mathcal{L}^{-1}\{(s\bs{I}-\bs{A})^{-1}\}\\
+			\bs{B}_d(T) &= \mathcal{L}^{-1}\{(\frac{1}{s}\bs{A}_d(s)\cdot \bs{B})\}
+			\end{align*}
+			Für $2\times2$-Matrix lässt sich $A_d$ so bestimmen:
+			\begin{align*}
+				\bs{A}_d(s) &= \frac{1}{|s\bs{I}-\bs{A}|} adj(s\bs{I}-\bs{A})\\
+				\bs{A}_d(T) &= \mathcal{L}^{-1}\{A_d(s)\}
+			\end{align*}
+			\tcblower
+			\begin{align*}
+				\mathcal{C}_d &= \begin{bmatrix}
+				\bs{B}_d & \bs{A}_d\bs{B}_d & \ldots & \bs{A}_d^{n-1}\bs{B}_d
+				\end{bmatrix}\\
+				\mathcal{O}_d &= \begin{bmatrix}
+				\bs{C} \\\bs{C}\bs{A}_d \\ \vdots \\ \bs{C}\bs{A}_d^{n-1}
+				\end{bmatrix}
+			\end{align*}
+			\begin{tcolorbox}[colback=white!10!white,colframe=gray!70!black,title=Steuerbarkeit und Beobachtbarkeit]
+				Das zeitdiskrete System ($\bs{A}_d,\bs{B}_d$) ist vollständig \textbf{steuerbar} bzw. \textbf{beobachtbar}, wenn  kontinuierliches System ($\bs{A},\bs{B}$)  es ist und wenn die Abtastzeit folgendes erfüllt:
+				 
+				\begin{align*}
+					T < \frac{\pi}{\omega_{j,\text{max}}}
+				\end{align*}
+				
+				$\omega_{j,\text{max}}$ ist betraglich größter Eigenwert von $A$
+			\end{tcolorbox}	
+		\end{tcolorbox}
+		\columnbreak
+			

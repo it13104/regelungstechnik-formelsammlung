@@ -1,0 +1,28 @@
+\section{Zustandsdarstellung}
+
+\begin{tcolorbox}[colback=white!10!white,colframe=blue!70!black,title=Übertragungsfunktion aus Zustandsraumdarstellung]
+	\begin{tcolorbox}[colback=white!10!white,colframe=gray!70!black,title=Matrixinversion]
+		
+		\begin{align*}
+			G(s) = \frac{Y(s)}{U(s)} &= \boldsymbol{C}(s\boldsymbol{I}-\boldsymbol{A})^{-1}\boldsymbol{B}+D
+		\end{align*}
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[colback=white!10!white,colframe=gray!70!black,title=Verallgemeinerte Systemmatrix]
+			Rosenbrockmatrix aufstellen:
+			\begin{align*}
+				\boldsymbol{P}(s) &= 
+			\left[\begin{array}{c|c}
+			s\boldsymbol{I}-\boldsymbol{A} & \boldsymbol{B} \\\hline
+			-\boldsymbol{C} & D 
+			\end{array}\right]	
+			\end{align*}
+		Übertragungsfunktion:
+		\begin{align*}
+			G(s) &= \frac{\boldsymbol{C} adj(s\boldsymbol{I}-\boldsymbol{A})\boldsymbol{B}+D|s\boldsymbol{I}-\boldsymbol{A}|}{|s\boldsymbol{I}-\boldsymbol{A}|}\\
+			&= \frac{|\boldsymbol{P}(s)|}{|s\boldsymbol{I}-\boldsymbol{A}|}
+		\end{align*}
+			
+	\end{tcolorbox}
+	
+\end{tcolorbox}

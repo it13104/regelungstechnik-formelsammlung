@@ -1,0 +1,24 @@
+\textbf{Definition:}
+Aus der Funktion \ref{eq:uebertragung} stellt man die Matrizen auf:
+	\begin{align*}
+		\dot{\bs{x}} &= 
+		\begin{bmatrix}
+			0 &  \cdots & 0 &-a_n\\
+			1 &\cdots & 0 & -a_{n-1} \\
+			\vdots&\ddots&\vdots&\vdots\\
+			0&\cdots&1&-a_1
+		\end{bmatrix}\bs{x}+ 
+		\begin{bmatrix}
+			b_n \\ b_{n-1} \\ \vdots \\b_1
+		\end{bmatrix} u \\
+		y&= \begin{bmatrix}
+			0 & \cdots & 0& 1
+		\end{bmatrix} \bs{x}
+	\end{align*}
+	\begin{tcolorbox}[colback=white!10!white,colframe=gray!70!black,title=Umrechnungsregeln]
+		\begin{align*}
+			\bs{A}_O = \bs{A}_C^T &\hspace{0.3cm} \bs{B}_O = \bs{C}_C^T \\
+			\bs{C}_O = \bs{B}_C^T   &\hspace{0.3cm} D_O = D_C
+		\end{align*}
+	
+	\end{tcolorbox}
