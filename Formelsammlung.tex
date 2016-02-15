@@ -25,10 +25,10 @@
 %\setlength{\abovecaptionskip}{30pt}
 \makeatletter
 \renewcommand*\env@matrix[1][\arraystretch]{%
-	\edef\arraystretch{#1}%
-	\hskip -\arraycolsep
-	\let\@ifnextchar\new@ifnextchar
-	\array{*\c@MaxMatrixCols c}}
+    \edef\arraystretch{#1}%
+    \hskip -\arraycolsep
+    \let\@ifnextchar\new@ifnextchar
+    \array{*\c@MaxMatrixCols c}}
 \makeatother
 \AtBeginEnvironment{bmatrix}{\setlength{\arraycolsep}{1.5pt}}
 \AtBeginEnvironment{vmatrix}{\setlength{\arraycolsep}{1.5pt}}
@@ -57,20 +57,20 @@
 \setlength{\columnsep}{1cm} 
 \begin{multicols}{3} 
 
-	
+    
 
-	\input{content/blockd.tex}
-	\input{content/wurzelortskurve.tex}
-	\input{content/blockdiagramme.tex}
-	\input{content/zustandsraumdarstellung.tex}
-	\input{content/Zustandstransformation.tex}
+    \input{content/blockd.tex}
+    \input{content/wurzelortskurve.tex}
+    \input{content/blockdiagramme.tex}
+    \input{content/zustandsraumdarstellung.tex}
+    \input{content/Zustandstransformation.tex}
 
-	\input{content/diskret.tex}
-	\input{content/partial.tex}
-	\input{content/kap4.tex}
-	\input{content/laplace.tex}
-	\input{content/RegInZR.tex}
-	\input{content/Kalman-Filter.tex}
-	\input{content/LQ-Regler.tex}
+    \input{content/diskret.tex}
+    \input{content/partial.tex}
+    \input{content/kap4.tex}
+    \input{content/laplace.tex}
+    \input{content/RegInZR.tex}
+    \input{content/Kalman-Filter.tex}
+    \input{content/LQ-Regler.tex}
 \end{multicols} 
 \end{document}

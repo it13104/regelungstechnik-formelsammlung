@@ -1,37 +1,37 @@
 \section{LQ-Regler - optimaler Regler}
 \begin{tcolorbox}[colback=white!10!white,colframe=green!30!black] 
-	\textbf{Anforderung an Tuning-Matrizen:}
-	\begin{align*}
-		\bs{P} = \bs{P}^T \succeq 0 && 	\bs{Q} = \bs{Q}^T \succeq 0  &&  \bs{R} = \bs{R}^T \succ 0
-	\end{align*}
-	
-	\tcblower
-	\begin{enumerate}
-		\item Löse Gleichung 	\begin{align*}
-		\bs{0} = -(\bs{PF})^T - \bs{PF} -\bs{PG}\bs{R}^{-1}(\bs{PG})^T  -\bs{Q} = \bs{0}
-		\end{align*}
-		\item optimaler Regeleingang
-		\begin{align*}
-			u(t) = - \bs{Kx}(t) = -(\underbrace{\bs{R}^{-1}\bs{G}^T\bs{P}}_{K})\bs{x}(t)
-		\end{align*}
-		\item Eine Lösung ist gegeben, wenn alle instabilen Zustände steuerbar sind  -\textbf{stabilisierbar}
-		\item Instabile Moden müssen durch die Kostenfunktion erfasst werden
-		\item Stabil, wenn das System \begin{align*}
-			\dot{\bs{x}} = \bs{Fx} && \bs{y} = \bs{Q}^{\frac{1}{2}}\bs{x} 
-		\end{align*}
-		\textbf{detektierbar} ist. Alle instabilen Zustände sind beobachtbar.
-		\item Wenn $[\bs{H},\bs{F}]$ detektierbar ist typischerweise $Q = \bs{H}^T\bs{H}$ 
-	\end{enumerate}
+    \textbf{Anforderung an Tuning-Matrizen:}
+    \begin{align*}
+        \bs{P} = \bs{P}^T \succeq 0 &&     \bs{Q} = \bs{Q}^T \succeq 0  &&  \bs{R} = \bs{R}^T \succ 0
+    \end{align*}
+    
+    \tcblower
+    \begin{enumerate}
+        \item Löse Gleichung     \begin{align*}
+        \bs{0} = -(\bs{PF})^T - \bs{PF} -\bs{PG}\bs{R}^{-1}(\bs{PG})^T  -\bs{Q} = \bs{0}
+        \end{align*}
+        \item optimaler Regeleingang
+        \begin{align*}
+            u(t) = - \bs{Kx}(t) = -(\underbrace{\bs{R}^{-1}\bs{G}^T\bs{P}}_{K})\bs{x}(t)
+        \end{align*}
+        \item Eine Lösung ist gegeben, wenn alle instabilen Zustände steuerbar sind  -\textbf{stabilisierbar}
+        \item Instabile Moden müssen durch die Kostenfunktion erfasst werden
+        \item Stabil, wenn das System \begin{align*}
+            \dot{\bs{x}} = \bs{Fx} && \bs{y} = \bs{Q}^{\frac{1}{2}}\bs{x} 
+        \end{align*}
+        \textbf{detektierbar} ist. Alle instabilen Zustände sind beobachtbar.
+        \item Wenn $[\bs{H},\bs{F}]$ detektierbar ist typischerweise $Q = \bs{H}^T\bs{H}$ 
+    \end{enumerate}
 
 \begin{tcolorbox}[colback=white!10!white,colframe=gray!30!black] 
-	Stabilisierbarkeit lässt sich durch die B-Matrix, Detektierbarkeit durch die C-Matrix erkennen, wenn das System in Modalform vorliegt.
-\end{tcolorbox}	
+    Stabilisierbarkeit lässt sich durch die B-Matrix, Detektierbarkeit durch die C-Matrix erkennen, wenn das System in Modalform vorliegt.
+\end{tcolorbox}    
 \begin{tcolorbox}[colback=white!10!white,colframe=gray!30!black] 
-	Ein Maß für die Güte eines Reglers ist die Kostenfunktion $J$. Die Funktion spiegelt die Kosten  für einen Regler wider. Man minimiert die Kostenfunktion. $\Rightarrow$ Ricatti-Gleichung
-	
-	\begin{align*}
-		J = \int_{0}^{\infty}(\bs{x}^T(t)\bs{Qx}(t)+\bs{u}^T(t)\bs{Ru}(t))dt
-	\end{align*}
-\end{tcolorbox}	
-	
+    Ein Maß für die Güte eines Reglers ist die Kostenfunktion $J$. Die Funktion spiegelt die Kosten  für einen Regler wider. Man minimiert die Kostenfunktion. $\Rightarrow$ Ricatti-Gleichung
+    
+    \begin{align*}
+        J = \int_{0}^{\infty}(\bs{x}^T(t)\bs{Qx}(t)+\bs{u}^T(t)\bs{Ru}(t))dt
+    \end{align*}
+\end{tcolorbox}    
+    
 \end{tcolorbox}

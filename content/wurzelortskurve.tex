@@ -1,50 +1,50 @@
-	\section{Wurzelortskurve}
+    \section{Wurzelortskurve}
 \begin{tcolorbox}[colback=white!10!white,colframe=blue!50!white,title=Konstruktionsregeln]
-	$n$ - Anzahl der Pole ($p_i$)\hspace{1cm}
-	$m$ - Anzahl der NST ($z_i$)
-	\tcblower  %makes a horizontal line
-	\textbf{Regel 1:}\\
-	$n-m$ Zweige gehen zu den  Asymptoten\\
-	$m$ Zweige enden in den NSTs\\
+    $n$ - Anzahl der Pole ($p_i$)\hspace{1cm}
+    $m$ - Anzahl der NST ($z_i$)
+    \tcblower  %makes a horizontal line
+    \textbf{Regel 1:}\\
+    $n-m$ Zweige gehen zu den  Asymptoten\\
+    $m$ Zweige enden in den NSTs\\
 
-	\textbf{Regel 2:}\\
-		Ein Punkt ist auf WOK, wenn die Summe der Pole und NST rechts vom Punkt ungerade ist (0 ist ungerade) (Nur Pole und NST auf der reellen Achse)\\
-		
-	\textbf{Regel 3:}\\
-	Asymptoten schneiden sich im Schwerpunkt $\alpha$ und haben Winkel $\Phi_l$, $l =1,\dots,n-m$
-	\begin{align*}
-		\Phi_l &= \frac{180^\circ}{n-m}+\frac{360^\circ(l-1)}{n-m}\\
-		\alpha &=	\frac{\sum p_i - \sum z_i}{n-m}
-	\end{align*}
-		\textbf{Regel 4:}\\
-		Beachte Laufindex: $l=1,\dots,q$\\
-		Austrittswinkel  der Zweige $q$-Facher Pol. $\Phi_i$- Winkel aus der Sicht der Polstelle. $\Psi_i$ - Winkel aus der Sicht der Nullstelle.
-		\begin{align*}
-			\Phi_{l,Beginn} &= \frac{1}{q}\left (\sum\Psi_i-\sum_{i\not= l}\Phi_i-180^\circ-360^\circ(l-1)\right )
-		\end{align*}
-		Eintrittswinkel in die $q$-fachen Nullstellen:
-		\begin{align*}
-			\Psi_{l,End} &= \frac{1}{q}\left (\sum\Phi_i-\sum_{i\not= l}\Psi_i+180^\circ+360^\circ(l-1)\right )
-		\end{align*}
-		\textbf{Regel 5:}\\
-		Austrittswinkel aus einem Verzweigungspunkt ($q$-facher Pol):
-		\begin{align*}
-			\Psi_l = \frac{180^\circ}{q}+360^\circ\frac{l-1}{q}
-		\end{align*}
-		\textbf{Regel 6:}\\
-		Verzweigungspunkte Pole (Nullstellen):
-		\begin{align*}
-			\sum_{i=1}^{m}\frac{1}{s-z_i}-\sum_{i=1}^{n}\frac{1}{s-p_i} =0
-		\end{align*}
-		\textbf{Charakteristische Gleichung:}
-		\begin{align*}
-			1+ K*L(s) = 0
-		\end{align*}
-		
-		\textbf{Berechnung von $\bs{K}$:}
-		
-		Das gesuchte $s$ in die Gleichung einsetzen und die Gleichung lösen
-		\begin{align*}
-			K = -\frac{\prod_{i}(s-p_i)}{\prod_{i}(s-z_i)}
-		\end{align*}
+    \textbf{Regel 2:}\\
+        Ein Punkt ist auf WOK, wenn die Summe der Pole und NST rechts vom Punkt ungerade ist (0 ist ungerade) (Nur Pole und NST auf der reellen Achse)\\
+        
+    \textbf{Regel 3:}\\
+    Asymptoten schneiden sich im Schwerpunkt $\alpha$ und haben Winkel $\Phi_l$, $l =1,\dots,n-m$
+    \begin{align*}
+        \Phi_l &= \frac{180^\circ}{n-m}+\frac{360^\circ(l-1)}{n-m}\\
+        \alpha &=    \frac{\sum p_i - \sum z_i}{n-m}
+    \end{align*}
+        \textbf{Regel 4:}\\
+        Beachte Laufindex: $l=1,\dots,q$\\
+        Austrittswinkel  der Zweige $q$-Facher Pol. $\Phi_i$- Winkel aus der Sicht der Polstelle. $\Psi_i$ - Winkel aus der Sicht der Nullstelle.
+        \begin{align*}
+            \Phi_{l,Beginn} &= \frac{1}{q}\left (\sum\Psi_i-\sum_{i\not= l}\Phi_i-180^\circ-360^\circ(l-1)\right )
+        \end{align*}
+        Eintrittswinkel in die $q$-fachen Nullstellen:
+        \begin{align*}
+            \Psi_{l,End} &= \frac{1}{q}\left (\sum\Phi_i-\sum_{i\not= l}\Psi_i+180^\circ+360^\circ(l-1)\right )
+        \end{align*}
+        \textbf{Regel 5:}\\
+        Austrittswinkel aus einem Verzweigungspunkt ($q$-facher Pol):
+        \begin{align*}
+            \Psi_l = \frac{180^\circ}{q}+360^\circ\frac{l-1}{q}
+        \end{align*}
+        \textbf{Regel 6:}\\
+        Verzweigungspunkte Pole (Nullstellen):
+        \begin{align*}
+            \sum_{i=1}^{m}\frac{1}{s-z_i}-\sum_{i=1}^{n}\frac{1}{s-p_i} =0
+        \end{align*}
+        \textbf{Charakteristische Gleichung:}
+        \begin{align*}
+            1+ K*L(s) = 0
+        \end{align*}
+        
+        \textbf{Berechnung von $\bs{K}$:}
+        
+        Das gesuchte $s$ in die Gleichung einsetzen und die Gleichung lösen
+        \begin{align*}
+            K = -\frac{\prod_{i}(s-p_i)}{\prod_{i}(s-z_i)}
+        \end{align*}
 \end{tcolorbox}

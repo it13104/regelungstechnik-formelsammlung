@@ -1,52 +1,52 @@
 \begin{tcolorbox}[colback=white!10!white,colframe=blue!70!black,title=KOCHREZEPT: Modalform]
-	\input{./modal/def.tex}
-	\tcblower
-	Zum erstellen der Modalform:
-	\begin{align}
-		\text{Eigenwerte } \lambda_i \text{ von } \bs{F} berechnen\\
-		\text{Eigenvektoren von } \bs{F} \text{ bilden } \bs{T}
-	\end{align}
-		\begin{tcolorbox}[colback=white!10!white,colframe=blue!70!black,title=Umrechnungsvorschrift in Modalform]
-			\begin{align*}
-			\bs{A} = \text{diag}\{\lambda_1,\dots,\lambda_n\} &
-			 \\
-			\bs{B} = \bs{T}^{-1}\bs{G} 
-			&
-			\hspace{1cm}\bs{C} = \bs{HT}
-			\end{align*}
-		\end{tcolorbox}
+    \input{./modal/def.tex}
+    \tcblower
+    Zum erstellen der Modalform:
+    \begin{align}
+        \text{Eigenwerte } \lambda_i \text{ von } \bs{F} berechnen\\
+        \text{Eigenvektoren von } \bs{F} \text{ bilden } \bs{T}
+    \end{align}
+        \begin{tcolorbox}[colback=white!10!white,colframe=blue!70!black,title=Umrechnungsvorschrift in Modalform]
+            \begin{align*}
+            \bs{A} = \text{diag}\{\lambda_1,\dots,\lambda_n\} &
+             \\
+            \bs{B} = \bs{T}^{-1}\bs{G} 
+            &
+            \hspace{1cm}\bs{C} = \bs{HT}
+            \end{align*}
+        \end{tcolorbox}
 
-	\begin{tcolorbox}[colback=white!10!white,colframe=gray!70!black,title=Aussagen]
-		Für $\bs{B}$ - wenn $b_i = 0$ $\Rightarrow x_i$ \textbf{nicht steuerbar}
-		
-		Für $\bs{C}$ - wenn $c_i = 0$ $\Rightarrow x_i$ \textbf{nicht beobachtbar}
-		
-		
-		
-	\end{tcolorbox}		
-		
-	
+    \begin{tcolorbox}[colback=white!10!white,colframe=gray!70!black,title=Aussagen]
+        Für $\bs{B}$ - wenn $b_i = 0$ $\Rightarrow x_i$ \textbf{nicht steuerbar}
+        
+        Für $\bs{C}$ - wenn $c_i = 0$ $\Rightarrow x_i$ \textbf{nicht beobachtbar}
+        
+        
+        
+    \end{tcolorbox}        
+        
+    
 \end{tcolorbox}
 
 \paragraph{Aufgabe:}
 Stellen Sie folgende Übertragungsfunktion in Jordannormalform dar:
 \begin{align*}
-	G(s) &=  \frac{2s+4}{s^2(s^2+2s+4)} = \frac{1}{s^2} - \frac{1}{s^2+2s+4}
+    G(s) &=  \frac{2s+4}{s^2(s^2+2s+4)} = \frac{1}{s^2} - \frac{1}{s^2+2s+4}
 \end{align*}
 \textbf{Lösung:}
 \begin{align*}
-	\begin{bmatrix}
-	\dot{x}_1\\\dot{x}_2\\\dot{x}_3\\\dot{x}_4
-		\end{bmatrix} = \left[\begin{array}{cc|cc}
-		0&1&0&0\\
-		0&0&0&0\\\hline
-		0&0&0&1\\
-		0&0&-4&-2\\
-		\end{array}\right]\begin{bmatrix}
-		x_1\\x_2\\x_3\\x_4
-		\end{bmatrix} + \begin{bmatrix}
-			0\\1\\0\\1
-		\end{bmatrix}u && y = \begin{bmatrix}
-		1 &0&-1&0
-		\end{bmatrix}x
+    \begin{bmatrix}
+    \dot{x}_1\\\dot{x}_2\\\dot{x}_3\\\dot{x}_4
+        \end{bmatrix} = \left[\begin{array}{cc|cc}
+        0&1&0&0\\
+        0&0&0&0\\\hline
+        0&0&0&1\\
+        0&0&-4&-2\\
+        \end{array}\right]\begin{bmatrix}
+        x_1\\x_2\\x_3\\x_4
+        \end{bmatrix} + \begin{bmatrix}
+            0\\1\\0\\1
+        \end{bmatrix}u && y = \begin{bmatrix}
+        1 &0&-1&0
+        \end{bmatrix}x
 \end{align*}

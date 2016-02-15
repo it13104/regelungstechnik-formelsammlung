@@ -2,29 +2,29 @@
 Alle Pole der Übertragungsfunktion müssen in der LHE sein. \textbf{Steuerung} stabilisiert nicht. 
 \textbf{Regelung:}
 
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=.7\textwidth]{content/img/regler}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\textwidth]{content/img/regler}
 \end{figure}
-	\begin{align*}
-	&G(s) = \frac{b(s)}{a(s)}  && D_{OL} = \frac{c(s)}{d(s)}
-	&1+ G D_{CL} = 0\\ 
-	&1 + \frac{bc}{ad} = 0  &&
-	a(s)d(s) + b(s)c(s) = 0 
-	\end{align*}
+    \begin{align*}
+    &G(s) = \frac{b(s)}{a(s)}  && D_{OL} = \frac{c(s)}{d(s)}
+    &1+ G D_{CL} = 0\\ 
+    &1 + \frac{bc}{ad} = 0  &&
+    a(s)d(s) + b(s)c(s) = 0 
+    \end{align*}
 Die Regelung reduziert die Auswirkung von Störung um $1+ AK$
 
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Sensitivität] 
-	Sensitivität beschreibt die Reaktion des Systems auf Änderung im Parameter
-	\begin{align*}
-		& S_{A}^{T_{CL}} = \frac{A}{T_{CL}}\frac{d T_{CL}}{dA}
-		& |S_{G}^{T_{CL}}| = \frac{1}{1+G(i\omega_0)D(i\omega_0)}
-		\end{align*}
-	\begin{align*}
-		&T_{CL} -\text{ Closed-Loop Übertragungsfunktion} & A - \text{Parameter}
-	\end{align*}
+    Sensitivität beschreibt die Reaktion des Systems auf Änderung im Parameter
+    \begin{align*}
+        & S_{A}^{T_{CL}} = \frac{A}{T_{CL}}\frac{d T_{CL}}{dA}
+        & |S_{G}^{T_{CL}}| = \frac{1}{1+G(i\omega_0)D(i\omega_0)}
+        \end{align*}
+    \begin{align*}
+        &T_{CL} -\text{ Closed-Loop Übertragungsfunktion} & A - \text{Parameter}
+    \end{align*}
 \end{tcolorbox}
 %ROUTH-Criterion
 \input{content/routh.tex}

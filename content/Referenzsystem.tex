@@ -4,30 +4,30 @@ Das ist, dass im eingeschwungenen Zustand der Ausgang $y = r$ ist. Mit $u = -\bs
 \tcblower
 \textbf{Vorgehensweise}
 \begin{enumerate}
-	\item Gleichung \begin{align*}
-		\begin{bmatrix}
-		\bs{F} &\bs{G}\\ \bs{H} & J
-		\end{bmatrix}\begin{bmatrix}
-		\bs{N_x}\\N_u
-		\end{bmatrix} = \begin{bmatrix}
-			0\\1
-		\end{bmatrix} && \begin{bmatrix}
-		\bs{N_x}\\N_u
-		\end{bmatrix} = 
-		\begin{bmatrix}
-		\bs{F} &\bs{G}\\ \bs{H} & J
-		\end{bmatrix}^{-1} \begin{bmatrix}
-		0\\1
-		\end{bmatrix}
-	\end{align*}
-	\item Damit ergibt sich \begin{align*}
-	u &= N_u  *r-\bs{K}(\bs{x}-\bs{N_x}r)\\
-	&= -\bs{Kx}+\underbrace{(N_u+\bs{KN_x})}_{\bar{N}}r
-	\end{align*}
+    \item Gleichung \begin{align*}
+        \begin{bmatrix}
+        \bs{F} &\bs{G}\\ \bs{H} & J
+        \end{bmatrix}\begin{bmatrix}
+        \bs{N_x}\\N_u
+        \end{bmatrix} = \begin{bmatrix}
+            0\\1
+        \end{bmatrix} && \begin{bmatrix}
+        \bs{N_x}\\N_u
+        \end{bmatrix} = 
+        \begin{bmatrix}
+        \bs{F} &\bs{G}\\ \bs{H} & J
+        \end{bmatrix}^{-1} \begin{bmatrix}
+        0\\1
+        \end{bmatrix}
+    \end{align*}
+    \item Damit ergibt sich \begin{align*}
+    u &= N_u  *r-\bs{K}(\bs{x}-\bs{N_x}r)\\
+    &= -\bs{Kx}+\underbrace{(N_u+\bs{KN_x})}_{\bar{N}}r
+    \end{align*}
 \end{enumerate}
 
 
 
-	
+    
 \end{tcolorbox}
 \columnbreak

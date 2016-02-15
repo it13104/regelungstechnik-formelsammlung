@@ -2,57 +2,57 @@ Partialbruchzerlegung der Übertragungsfunktion $\Rightarrow$ Modus
 \\
 
 \begin{enumerate}
-	\item Alle Pole sind \underline{reell} und \underline{einfach}:
-	\begin{align*}
-	G(s) = \frac{b_1}{s-p_1}+ \cdots +\frac{b_n}{s-p_n}
-	\end{align*}
-	\begin{align*}
-	\dot{\bs{x}} = 
-	\begin{bmatrix}[1]
-	p_1 & 0 &\cdots & 0 \\
-	0&p_2 &\cdots & 0  \\
-	\vdots&\vdots&\ddots&\vdots\\
-	0&0&\cdots&p_n
-	\end{bmatrix}\bs{x}+ 
-	\begin{bmatrix}
-	1\\ 1 \\ \vdots \\1
-	\end{bmatrix} u 	
-	\end{align*}
-	\begin{align*}
-	y= \begin{bmatrix}
-	b_1 & b_2&\cdots &b_n
-	\end{bmatrix} \bs{x}
-	\end{align*}
-	\textbf{Jordanform -  wenn die Nullstellen nicht reell sind:}
-	\item Komplexes Polpaar $\Rightarrow$ Partialbruch der Art.
-	Blockmatrizen für das Polpaar werden an entsprechender Stelle eingefügt
-	\begin{align*}
-		\frac{b_{i+1}s+b_i}{s^2+a_is+a_{i+1}}
-	\end{align*}
-	\begin{align*}
-		\dot{\bs{x}} = \begin{bmatrix}
-			0 & 1\\
-			-a_{i+1} & -a_i
-		\end{bmatrix}\bs{x} + \begin{bmatrix}
-		0\\1
-		\end{bmatrix}u & & \bs{y} = \begin{bmatrix}
-		b_i & b_{i+1}
-		\end{bmatrix}\bs{x}
-	\end{align*}
-	
-	\item Ein $m$-facher Pol $\frac{b}{(s-p)^m}$
-	\begin{align*}
-		\dot{\bs{x}} = \begin{bmatrix}
-			p&1&\cdots&0&0\\
-			0&p&\cdots&0&0\\
-			\vdots&\vdots&\ddots&\vdots&\vdots\\
-			0&0&\cdots&p&1\\
-			0&0&\cdots&0&p
-		\end{bmatrix}\bs{x} + \begin{bmatrix}
-		0\\0\\\vdots\\0\\1
-		\end{bmatrix} u &&\bs{y} = \begin{bmatrix}
-		b&0&\cdots&0&0
-		\end{bmatrix}\bs{x}
-	\end{align*}
-	
+    \item Alle Pole sind \underline{reell} und \underline{einfach}:
+    \begin{align*}
+    G(s) = \frac{b_1}{s-p_1}+ \cdots +\frac{b_n}{s-p_n}
+    \end{align*}
+    \begin{align*}
+    \dot{\bs{x}} = 
+    \begin{bmatrix}[1]
+    p_1 & 0 &\cdots & 0 \\
+    0&p_2 &\cdots & 0  \\
+    \vdots&\vdots&\ddots&\vdots\\
+    0&0&\cdots&p_n
+    \end{bmatrix}\bs{x}+ 
+    \begin{bmatrix}
+    1\\ 1 \\ \vdots \\1
+    \end{bmatrix} u     
+    \end{align*}
+    \begin{align*}
+    y= \begin{bmatrix}
+    b_1 & b_2&\cdots &b_n
+    \end{bmatrix} \bs{x}
+    \end{align*}
+    \textbf{Jordanform -  wenn die Nullstellen nicht reell sind:}
+    \item Komplexes Polpaar $\Rightarrow$ Partialbruch der Art.
+    Blockmatrizen für das Polpaar werden an entsprechender Stelle eingefügt
+    \begin{align*}
+        \frac{b_{i+1}s+b_i}{s^2+a_is+a_{i+1}}
+    \end{align*}
+    \begin{align*}
+        \dot{\bs{x}} = \begin{bmatrix}
+            0 & 1\\
+            -a_{i+1} & -a_i
+        \end{bmatrix}\bs{x} + \begin{bmatrix}
+        0\\1
+        \end{bmatrix}u & & \bs{y} = \begin{bmatrix}
+        b_i & b_{i+1}
+        \end{bmatrix}\bs{x}
+    \end{align*}
+    
+    \item Ein $m$-facher Pol $\frac{b}{(s-p)^m}$
+    \begin{align*}
+        \dot{\bs{x}} = \begin{bmatrix}
+            p&1&\cdots&0&0\\
+            0&p&\cdots&0&0\\
+            \vdots&\vdots&\ddots&\vdots&\vdots\\
+            0&0&\cdots&p&1\\
+            0&0&\cdots&0&p
+        \end{bmatrix}\bs{x} + \begin{bmatrix}
+        0\\0\\\vdots\\0\\1
+        \end{bmatrix} u &&\bs{y} = \begin{bmatrix}
+        b&0&\cdots&0&0
+        \end{bmatrix}\bs{x}
+    \end{align*}
+    
 \end{enumerate}
