@@ -1,4 +1,5 @@
-\section{Pole und NST in der s-Ebene}
+\setcounter{section}{3}
+\section{Frequenzgang und Polstellenlage}
 \begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=PT$_2$ - Glied] 
     \begin{figure}[H]
         \begin{minipage}{.3\textwidth}
@@ -19,11 +20,9 @@
 \end{tcolorbox}
 
 \begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Auswirkung der NST und Polenlage] 
-    \begin{figure}[H]
-    
+    \begin{figure}[H]    
             \centering
             \includegraphics[width=1\textwidth]{content/img/lageAntwort}
-
     \end{figure}
 \tcblower
     \textbf{Polstelle (reell + komplexes Polpaar)}
@@ -40,7 +39,6 @@
             \hline 
         \end{tabular} 
     \end{table}
-    
     \textbf{Nullstelle:}
     \begin{table}[H]
         \centering
@@ -52,12 +50,10 @@
         \end{tabular} 
     \end{table}
 \end{tcolorbox}
-
 \begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Kenngrößen] 
     \begin{figure}[H]
         \includegraphics[width=1\linewidth]{content/img/numb}
     \end{figure}
-    
 \begin{minipage}{.45\textwidth}
         Steigzeit (0,1 - 0,9):
     \begin{align*}
@@ -81,23 +77,19 @@
  \begin{align*}
  t_p &= \frac{\pi}{\omega_n \sqrt{1-\zeta^2}} =\frac{\pi}{\omega_d}
  \end{align*}
-
 \end{minipage}    
 \begin{minipage}{.45\textwidth}
     Gedämpfte Kreisfrequenz:
     \begin{align*}
         \omega_d = \omega_n*\sqrt{1-\zeta^2}
     \end{align*}
-    
 \end{minipage}
 \begin{minipage}{.45\textwidth}
     Ungedämpft zu gedämpft
     \begin{align*}
     \omega_n^2 = \sigma^2+\omega_d^2
     \end{align*}
-    
 \end{minipage}
     Dämpfung $\zeta = \sqrt{\frac{\ln(M_p)^2}{\pi^2+\ln(M_p)^2}}$
-    
 \end{tcolorbox}
-\input{content/stability.tex}
+
