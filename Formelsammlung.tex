@@ -1,25 +1,9 @@
 \documentclass[landscape,fleqn,7pt]{scrartcl}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm,landscape]{geometry}
 \usepackage[utf8]{inputenc}
+\input{preamble/preamble.tex}
 \usepackage[ngerman]{babel}
-\usepackage[fleqn]{amsmath} 
-\usepackage{multicol}
-%\usepackage{amsfonts}
-%\usepackage{amssymb}
-%\usepackage{gensymb}
-%\usepackage{dsfont}
-\usepackage{calc}
-%\usepackage[permil]{overpic}
-%\usepackage{graphicx}
-%\graphicspath{{gfx/}}
-\usepackage{blindtext}
-\usepackage{tikz}
-
-\usepackage{enumitem}
-\usepackage{float}
-\usepackage{graphicx}
-\usepackage{subcaption}
-\usepackage{tcolorbox}
+\input{macros/TableCommands.tex}
 
 % circled number
 \newcommand\circled[1]{
@@ -30,7 +14,6 @@
 % section heading style
 \renewcommand{\thesection}{\protect\circled{\arabic{section}}}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-
 
 \setlength{\intextsep}{0mm plus1mm minus1mm}
 
@@ -46,8 +29,8 @@
 \AtBeginEnvironment{vmatrix}{\setlength{\arraycolsep}{1.5pt}}
 \AtBeginEnvironment{array}{\setlength{\arraycolsep}{1.5pt}}
 
-\author{coltz} 
-\title{Formelsammlung Digitaltechnik} 
+\author{Stanislav Sokol}
+\title{Formelsammlung Regelungstechnik}
 
 \newcommand{\bs}[1]{\boldsymbol{#1}}
 \setlength\abovedisplayshortskip{0pt}
@@ -77,7 +60,7 @@
     \input{content/1000_Zustandsraumdarstellung.tex}
     \input{content/1100_Kanonische_Formen.tex}
     \input{content/1300_Regelung_im_Zustandsraum.tex}
-    \input{content/1500_LQ-Regler.tex}
+    \input{content/1500_Optimale_Regelung.tex}
     \input{content/1600_Kalman-Filter.tex}
     \input{content/1700_Diskrete_Systeme.tex}
 \end{multicols}

@@ -1,16 +1,19 @@
-\setcounter{section}{14}
-\section{LQ-Regler - optimaler Regler}
+\subsection{LQ-Regler - optimaler Regler}
 \begin{tcolorbox}[colback=white!10!white,colframe=green!30!black] 
     \textbf{Anforderung an Tuning-Matrizen:}
     \begin{align*}
-        \bs{P} = \bs{P}^T \succeq 0 &&     \bs{Q} = \bs{Q}^T \succeq 0  &&  \bs{R} = \bs{R}^T \succ 0
+        \bs{P} = \bs{P}^T \succeq 0
+        && \bs{Q} = \bs{Q}^T \succeq 0
+        && \bs{R} = \bs{R}^T \succ 0
     \end{align*}
     
     \tcblower
     \begin{enumerate}
-        \item Löse Gleichung     \begin{align*}
-        \bs{0} = -(\bs{PF})^T - \bs{PF} -\bs{PG}\bs{R}^{-1}(\bs{PG})^T  -\bs{Q} = \bs{0}
-        \end{align*}
+        \item Löse Gleichung
+            \begin{align*}
+                \bs{0} = -\bs{F}^T\bs{P} - \bs{PF}
+                - \bs{PG}\bs{R}^{-1}\bs{G}^T\bs{P} - \bs{Q}
+            \end{align*}
         \item optimaler Regeleingang
         \begin{align*}
             u(t) = - \bs{Kx}(t) = -(\underbrace{\bs{R}^{-1}\bs{G}^T\bs{P}}_{K})\bs{x}(t)
@@ -33,6 +36,5 @@
     \begin{align*}
         J = \int_{0}^{\infty}(\bs{x}^T(t)\bs{Qx}(t)+\bs{u}^T(t)\bs{Ru}(t))dt
     \end{align*}
-\end{tcolorbox}    
-    
+\end{tcolorbox}
 \end{tcolorbox}
