@@ -23,12 +23,12 @@
         \item Jeder Term der Form $s^2 + 2D_im_is+m_i^2$ liefert einen Peak  am entsprechenden $\omega_i$. Eine Nullstelle unterhalb der Asymptote - eine Polstelle oberhalb der Asymptote.\\
         $(\pm)20\log(\frac{1}{2*D_i})$
     \end{enumerate}
-
+    Exakter Wert: $A_{dB}(\omega) = 20 \cdot \log_{10} \left(G(\omega)\right)$
     \tcblower
     \textbf{Phasengang:}
     \begin{enumerate}
         \item Bestimme Startfrequenz\\
-        $\phi(0) = \begin{cases}
+        $\varphi(0) = \begin{cases}
     r\cdot 90^\circ &\mbox{wenn } n \equiv c\cdot G^*(0)>0\\
     -180^\circ+r\cdot 90^\circ & \mbox{wenn } n \equiv c\cdot G^*(0)<0
         \end{cases} $
@@ -41,8 +41,14 @@
         \end{description}
         \item Wenn $2D_iq_is = 0 \rightarrow$ ungedämpftes Polpaar $\rightarrow\mbox{sign}(0) = \pm 1$ (kann gewählt werden)
     \end{enumerate}
-        
+    Exakter Wert: \\
+        $\varphi(\omega) = \sum\limits_{j} \arctan\left(-\frac{b}{a}\right)
+        : \forall G_j(i\omega) \in G^* : \begin{cases}
+            b + ai \\
+            \frac{1}{a + bi}
+        \end{cases}$
 \end{tcolorbox}
+
 \begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Phasenminimumsystem]
 \textbf{Phasenminimumsystem} ist dann gegeben, wenn die Übertragungsfunktion
 \begin{itemize}
