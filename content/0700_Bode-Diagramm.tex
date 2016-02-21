@@ -1,6 +1,8 @@
 \setcounter{section}{6}
-\section{Bodediagramm}
-\begin{tcolorbox}[colback=white!10!white,colframe=blue!50!white,title=Konstruktionsregeln]
+\section{Bode-Diagramm}
+\begin{tcolorbox}[colback=white!10!white,
+                  colframe=blue!50!white,
+                  title=Konstruktionsregeln Bode-Diagramm]
     \textbf{Amplitudengang:}
     \begin{align*}
         &G(s) = c\cdot s^r\cdot \underbrace{G_1(s) \cdot G_2(s)\cdot \ldots \cdot G_k(s)}_{G^*(s)}\cdot e^{-T_ts}\\
@@ -14,12 +16,16 @@
         $r\cdot20 \frac{\text{dB}}{\text{Dekade}}$
         \item Wenn zwischen benachbarten Eckfreuqenzen 1 Dekade liegt $\Rightarrow$ Absenkung(POL)/Erhöhung(NST) um  $n*3$dB über dem jeweiligen Knickpunkt
         \item Jede Eckfrequenz verändert die Steigung folgendermaßen
-                \begin{description}[leftmargin=14em,style=nextline]
-                    \item[$G_i = (s+n_i)$] $+20\frac{\text{dB}}{\text{Dekade}}$
-                    \item[$G_i = \frac{1}{(s+p_i)}$] $-20\frac{\text{dB}}{\text{Dekade}}$
-                    \item[$G_i = (s^2 + 2D_im_is+m_i^2)$] $+40\frac{\text{dB}}{\text{Dekade}}$
-                    \item[$G_i = \frac{1}{(s^2 + 2D_ip_is+p_i^2)}$] $-40\frac{\text{dB}}{\text{Dekade}}$
-                \end{description}
+            \begin{description}[leftmargin=14em,style=nextline]
+                \item[$G_i = (s+n_i)$] $+20\frac{\text{dB}}{\text{Dekade}}
+                                        ~~~ \omega_i=\left|n_i\right|$
+                \item[$G_i = \frac{1}{(s+p_i)}$] $-20\frac{\text{dB}}{\text{Dekade}}
+                                                  ~~~ \omega_i=\left|p_i\right|$
+                \item[$G_i = (s^2 + 2D_im_is+m_i^2)$] $+40\frac{\text{dB}}{\text{Dekade}}
+                                                       ~~~ \omega_i=\left|m_i\right|$
+                \item[$G_i = \frac{1}{(s^2 + 2D_ip_is+p_i^2)}$] $-40\frac{\text{dB}}{\text{Dekade}}
+                                                                 ~~~ \omega_i=\left|p_i\right|$
+            \end{description}
         \item Jeder Term der Form $s^2 + 2D_im_is+m_i^2$ liefert einen Peak  am entsprechenden $\omega_i$. Eine Nullstelle unterhalb der Asymptote - eine Polstelle oberhalb der Asymptote.\\
         $(\pm)20\log(\frac{1}{2*D_i})$
     \end{enumerate}
@@ -29,8 +35,8 @@
     \begin{enumerate}
         \item Bestimme Startfrequenz\\
         $\varphi(0) = \begin{cases}
-    r\cdot 90^\circ &\mbox{wenn } n \equiv c\cdot G^*(0)>0\\
-    -180^\circ+r\cdot 90^\circ & \mbox{wenn } n \equiv c\cdot G^*(0)<0
+    r\cdot 90^\circ &\mbox{wenn } c\cdot G^*(0)>0\\
+    -180^\circ+r\cdot 90^\circ & \mbox{wenn } c\cdot G^*(0)<0
         \end{cases} $
         \item an jeder Eckfrequenz springt die Phase:
         \begin{description}[leftmargin=14em,style=nextline]
