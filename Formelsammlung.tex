@@ -5,8 +5,9 @@
 \usepackage[ngerman]{babel}
 \input{macros/TableCommands.tex}
 
+
 % circled number
-\newcommand\circled[1]{
+\newcommand*\circled[1]{
     \tikz[baseline=(char.base)]{
         \node[shape=circle,draw,inner sep=2pt] (char) {#1};
     }
@@ -14,6 +15,12 @@
 % section heading style
 \renewcommand{\thesection}{\protect\circled{\arabic{section}}}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\titlecontents{section}
+[0.0cm]                            % left margin
+{\vspace{2em}}                     % above code
+{\thecontentslabel}                % numbered format
+{\thecontentslabel}                % unnumbered format
+{\titlerule*[1pc]{.}\contentspage} % filler-page-format, e.g dots
 
 \setlength{\intextsep}{0mm plus1mm minus1mm}
 
@@ -47,10 +54,13 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
+\fancyhead[L]{\href{https://github.com/it13104/regelungstechnik-formelsammlung}
+                   {github.com/it13104/regelungstechnik-formelsammlung}}
 \fancyhead[R]{\thepage}
 \begin{document}
 \setlength{\columnsep}{1cm}
 \begin{multicols}{3}
+    \tableofcontents
     \input{content/0200_Modellierung_dynamischer_Systeme.tex}
     \input{content/0300_Das_dynamische_Verhalten_von_Systemen.tex}
     \input{content/0400_Polstellenlage_und_Frequenzgang.tex}
