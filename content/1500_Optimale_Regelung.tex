@@ -1,0 +1,35 @@
+\setcounter{section}{14}
+\section{Optimale Regelung}
+\begin{tcolorbox}[colback=white!10!white,
+                  colframe=blue!50!black,
+                  title=Definitheit einer symmetrischen (Tuning-) Matrix]
+    \begin{minipage}{0.3\textwidth}
+        \centering
+        $\begin{bmatrix}a & b \\ b & c\end{bmatrix}$
+    \end{minipage}
+    \begin{minipage}{0.65\textwidth}
+        \centering
+        \begin{table}[H]
+        \centering
+        \tablestyle
+        \begin{tabular}{lccc}
+            \tableheadcolor
+                \tablehead Matrix &
+                \tablehead $a$ &
+                \tablehead $c$ &
+                \tablehead $a \cdot c$ \\
+            \tablebody
+            positiv definit $(\succ 0)$       & $  > 0$ & -       & $  > b^2$\\
+            positiv semidefinit $(\succeq 0)$ & $\ge 0$ & $\ge 0$ & $\ge b^2$\\
+            \tableend\tablebody
+            negativ definit $(\prec 0)$       & $  < 0$ & -       & $  > b^2$\\
+            negativ semidefinit $(\preceq 0)$ & $\le 0$ & $\le 0$ & $\ge b^2$\\
+            \tableend\tablebody
+            indefinit                         & -       & -       & $  < b^2$\\
+            \tableend
+        \end{tabular}
+    \end{table}
+    \end{minipage}
+\end{tcolorbox}
+
+\input{content/1501_LQ-Regler.tex}

@@ -1,4 +1,7 @@
-\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=CLM Kriterium] 
+\subsection{CLM-Stabilitätskriterium}
+\begin{tcolorbox}[colback=white!10!white,
+                  colframe=green!30!black,
+                  title=CLM-Kriterium] 
     \textbf{Annahme:}
     $m$-Wurzeln in RHE  und $n-m$-Wurzeln ($n \leq m$)
     
@@ -6,15 +9,16 @@
     \begin{align*}
         P(s) = a_0 + a_1s + a_2s^2 + \ldots + a_n s^n = 0 
     \end{align*}
-    Einsetzen $s = j\omega$. 
+    Einsetzen $s = j\omega$.
     Das System ist dann asymptotisch stabil, wenn
     \begin{enumerate}
-        \item die Ortskurve $P(j\omega)$  für $0 \leq \omega \leq \infty$ die Quadranten abwechselnd durchläuft (sich die Nullstellen des Real und Imaginärteils von $P(j\omega) = U(\omega)+iV(\omega)$ abwechseln.) 
-        \item Real- und Imaginärteil zusammen $n$ (Grad der Gleichung) reelle Nullstellen im Bereich $0 \leq \omega \leq \infty$ besitzen 
-    \end{enumerate} 
-    
-    
-    
+        \item die Ortskurve $P(j\omega)$  für $0 \leq \omega \leq \infty$ die 
+            Quadranten abwechselnd durchläuft (sich die Nullstellen des Real- 
+            und Imaginärteils von $P(j\omega) = U(\omega)+iV(\omega)$ 
+            abwechseln).
+        \item Real- und Imaginärteil zusammen $n$ (Grad der Gleichung) reelle 
+            Nullstellen im Bereich $0 \leq \omega \leq \infty$ besitzen.
+    \end{enumerate}
     
     \tcblower
     
@@ -30,18 +34,17 @@
         &2-7\omega^2 +4\omega^4 = 0 \\
         &\omega_1^2 = 0,36 & \omega_2^2= 1,39
     \end{align*}
-        Imaginärteil hat die Nullstellen:
+    Imaginärteil hat die Nullstellen:
         \begin{align*}
-        &5\omega - 8\omega^3 +\omega^5= 0 \\
-        &\omega3 = 0  & \omega_4^2= 0,68 & & \omega_5^2= 7,32 
+            &5\omega - 8\omega^3 +\omega^5= 0 \\
+            &\omega_3 = 0  & \omega_4^2= 0,68 & & \omega_5^2= 7,32 
         \end{align*}
-        
-        Insgesamt sind $n=5$ reelle Nullstellen mit $\omega_i >= 0$. Diese wechseln sich jeweils ab, damit ist das System asymptotisch stabil. $\omega_3 < \omega_1 < \omega_4 < \omega_2 < \omega_5$ Siehe Grafik:
-        \begin{figure}[H]
-\centering
-\includegraphics[width=0.7\linewidth]{content/img/clm}
-\label{fig:clm}
-\end{figure}
-
-        
+    Insgesamt sind $n=5$ reelle Nullstellen mit $\omega_i >= 0$ vorhanden. 
+    Diese wechseln sich jeweils ab, damit ist das System asymptotisch stabil. 
+    $\omega_3 < \omega_1 < \omega_4 < \omega_2 < \omega_5$ Siehe Grafik:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\linewidth]{images/clm}
+        \label{fig:clm}
+    \end{figure}
 \end{tcolorbox}

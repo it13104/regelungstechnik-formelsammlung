@@ -1,0 +1,44 @@
+\setcounter{section}{17}
+\section{Diskrete Fundamentalmatrix}
+\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Definition] 
+    \begin{align*}
+        \bs{A}_d(T)= e^{\bs{A}T} && B_d = \int_{0}^{T}\bs{A}_d
+        (\tau)d\tau    \cdot \bs{B} 
+    \end{align*}
+    Mit Taylorzerlegung kann man $A_d$ berechnen:
+    \begin{align*}
+        e^{\bs{A}t}  &= \bs{I} + \bs{A}t+\bs{A}^2\frac{t^2}{2!} + \bs{A}^3\frac{t^3}{3!}+ \ldots\\
+        \frac{d}{dt}e^{\bs{A}t} &= \bs{A} + \bs{A}^2t+\bs{A}^3\frac{t^2}{2!} + \ldots
+    \end{align*}
+\end{tcolorbox}
+\begin{tcolorbox}[colback=white!10!white,colframe=blue!30!black,title=KOCHREZEPT: Fundamentalmatrix Berechnung] 
+    \begin{align*}
+        \bs{A}_d(T) &= \mathcal{L}^{-1}\{(s\bs{I}-\bs{A})^{-1}\}\\
+        \bs{B}_d(T) &= \mathcal{L}^{-1}\{(\frac{1}{s}\bs{A}_d(s)\cdot \bs{B})\}
+    \end{align*}
+    Für $2\times2$-Matrix lässt sich $A_d$ so bestimmen:
+    \begin{align*}
+        \bs{A}_d(s) &= \frac{1}{|s\bs{I}-\bs{A}|} adj(s\bs{I}-\bs{A})\\
+        \bs{A}_d(T) &= \mathcal{L}^{-1}\{A_d(s)\}
+    \end{align*}
+    \tcblower
+    \begin{align*}
+        \mathcal{C}_d &= \begin{bmatrix}
+        \bs{B}_d & \bs{A}_d\bs{B}_d & \ldots & \bs{A}_d^{n-1}\bs{B}_d
+        \end{bmatrix}\\
+        \mathcal{O}_d &= \begin{bmatrix}
+        \bs{C} \\\bs{C}\bs{A}_d \\ \vdots \\ \bs{C}\bs{A}_d^{n-1}
+        \end{bmatrix}
+    \end{align*}
+    \begin{tcolorbox}[colback=white!10!white,
+                      colframe=gray!70!black,
+                      title=Steuerbarkeit und Beobachtbarkeit]
+        Das zeitdiskrete System ($\bs{A}_d,\bs{B}_d$) ist vollständig 
+        \textbf{steuerbar} bzw. \textbf{beobachtbar}, wenn kontinuierliches 
+        System ($\bs{A},\bs{B}$) es ist und wenn die Abtastzeit folgendes erfüllt:
+        \begin{align*}
+            T < \frac{\pi}{\omega_{j,\text{max}}}
+        \end{align*}
+        $\omega_{j,\text{max}}$ ist betraglich größter Eigenwert von $A$
+    \end{tcolorbox}
+\end{tcolorbox}

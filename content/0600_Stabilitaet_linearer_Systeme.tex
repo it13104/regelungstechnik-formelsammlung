@@ -1,22 +1,38 @@
 \setcounter{section}{5}
 \section{Stabilität von linearen Systemen}
-\begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Stabilität] 
-Alle Pole der Übertragungsfunktion müssen in der LHE sein. \textbf{Steuerung} stabilisiert nicht. 
-\textbf{Regelung:}
+\begin{tcolorbox}[colback=white!10!white,
+                  colframe=green!30!black,
+                  title=Stationäres Verhalten]
+    Stationärwert: $y_{ss} = \lim\limits_{t \rightarrow \infty}y\left(t\right)
+                           = \lim\limits_{s \rightarrow 0}sY\left(s\right)$ \\
+    $D\left(s\right) = \begin{cases}
+        K & \text{P-Regler} \\
+        K\left(1+\frac{1}{T_t}\right) & \text{PI-Regler} \\
+        K\left(1+\frac{1}{T_t}+T_Ds\right) & \text{PID-Regler} \\
+    \end{cases}$
+\end{tcolorbox}
 
+\begin{tcolorbox}[colback=white!10!white,
+                  colframe=green!30!black,
+                  title=Stabilität]
+    Alle Pole der Übertragungsfunktion müssen in der LHE sein.
+    \textbf{Steuerung} stabilisiert nicht.
+    \textbf{Regelung:}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=.7\textwidth]{content/img/regler}
-\end{figure}
+        \includegraphics[width=.7\textwidth]{images/regler}
+    \end{figure}
     \begin{align*}
-    &G(s) = \frac{b(s)}{a(s)}  && D_{OL} = \frac{c(s)}{d(s)}
-    &1+ G D_{CL} = 0\\ 
-    &1 + \frac{bc}{ad} = 0  &&
-    a(s)d(s) + b(s)c(s) = 0 
+        &G(s) = \frac{b(s)}{a(s)}  && D_{OL} = \frac{c(s)}{d(s)}
+        &1+ G D_{CL} = 0\\ 
+        &1 + \frac{bc}{ad} = 0  &&
+        a(s)d(s) + b(s)c(s) = 0 
     \end{align*}
-Die Regelung reduziert die Auswirkung von Störung um $1+ AK$
-
+    Die Regelung reduziert die Auswirkung von Störung um $1+ AK$.
 \end{tcolorbox}
+
+%ROUTH-Criterion
+\input{content/0601_Routh.tex}
 
 \begin{tcolorbox}[colback=white!10!white,colframe=green!30!black,title=Sensitivität] 
     Sensitivität beschreibt die Reaktion des Systems auf Änderung im Parameter
@@ -28,9 +44,6 @@ Die Regelung reduziert die Auswirkung von Störung um $1+ AK$
         &T_{CL} -\text{ Closed-Loop Übertragungsfunktion} & A - \text{Parameter}
     \end{align*}
 \end{tcolorbox}
-%ROUTH-Criterion
-\input{content/0601_Routh.tex}
+
 %CLM-Criterion
 \input{content/0602_CLM.tex}
-%NYQUIST-Criterion
-\input{content/0603_Nyquist.tex}

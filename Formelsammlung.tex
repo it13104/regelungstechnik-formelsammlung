@@ -1,28 +1,13 @@
 \documentclass[landscape,fleqn,7pt]{scrartcl}
 \usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm,landscape]{geometry}
 \usepackage[utf8]{inputenc}
+\input{preamble/preamble.tex}
 \usepackage[ngerman]{babel}
-\usepackage[fleqn]{amsmath} 
-\usepackage{multicol}
-%\usepackage{amsfonts}
-%\usepackage{amssymb}
-%\usepackage{gensymb}
-%\usepackage{dsfont}
-\usepackage{calc}
-%\usepackage[permil]{overpic}
-%\usepackage{graphicx}
-%\graphicspath{{gfx/}}
-\usepackage{blindtext}
-\usepackage{tikz}
+\input{macros/TableCommands.tex}
 
-\usepackage{enumitem}
-\usepackage{float}
-\usepackage{graphicx}
-\usepackage{subcaption}
-\usepackage{tcolorbox}
 
 % circled number
-\newcommand\circled[1]{
+\newcommand*\circled[1]{
     \tikz[baseline=(char.base)]{
         \node[shape=circle,draw,inner sep=2pt] (char) {#1};
     }
@@ -30,7 +15,12 @@
 % section heading style
 \renewcommand{\thesection}{\protect\circled{\arabic{section}}}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
-
+\titlecontents{section}
+[0.0cm]                            % left margin
+{\vspace{2em}}                     % above code
+{\thecontentslabel}                % numbered format
+{\thecontentslabel}                % unnumbered format
+{\titlerule*[1pc]{.}\contentspage} % filler-page-format, e.g dots
 
 \setlength{\intextsep}{0mm plus1mm minus1mm}
 
@@ -46,8 +36,8 @@
 \AtBeginEnvironment{vmatrix}{\setlength{\arraycolsep}{1.5pt}}
 \AtBeginEnvironment{array}{\setlength{\arraycolsep}{1.5pt}}
 
-\author{coltz} 
-\title{Formelsammlung Digitaltechnik} 
+\author{Stanislav Sokol}
+\title{Formelsammlung Regelungstechnik}
 
 \newcommand{\bs}[1]{\boldsymbol{#1}}
 \setlength\abovedisplayshortskip{0pt}
@@ -64,20 +54,26 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
+\fancyhead[L]{\href{https://github.com/it13104/regelungstechnik-formelsammlung}
+                   {github.com/it13104/regelungstechnik-formelsammlung}}
 \fancyhead[R]{\thepage}
 \begin{document}
 \setlength{\columnsep}{1cm}
 \begin{multicols}{3}
+    \tableofcontents
+    \input{content/0200_Modellierung_dynamischer_Systeme.tex}
     \input{content/0300_Das_dynamische_Verhalten_von_Systemen.tex}
     \input{content/0400_Polstellenlage_und_Frequenzgang.tex}
     \input{content/0600_Stabilitaet_linearer_Systeme.tex}
-    \input{content/0700_Bodediagramm.tex}
     \input{content/0800_Wurzelortskurve.tex}
+    \input{content/0700_Bode-Diagramm.tex}
+    \input{content/0900_Nyquist.tex}
     \input{content/1000_Zustandsraumdarstellung.tex}
     \input{content/1100_Kanonische_Formen.tex}
     \input{content/1300_Regelung_im_Zustandsraum.tex}
-    \input{content/1500_LQ-Regler.tex}
+    \input{content/1500_Optimale_Regelung.tex}
     \input{content/1600_Kalman-Filter.tex}
     \input{content/1700_Diskrete_Systeme.tex}
+    \input{content/1800_Diskrete_Fundamentalmatrix.tex}
 \end{multicols}
 \end{document}
